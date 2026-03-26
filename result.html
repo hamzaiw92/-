@@ -7,30 +7,31 @@
 <style>
 body {
     margin: 0;
-    background: #0b1a2b; /* ازرق حبري */
+    background: #0b1a2b;
     color: white;
     font-family: Arial;
 }
-.container {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    padding:20px;
-}
 
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
 
 .card {
+    width: 100%;
+    height: 100%;
     background: #0f243d;
-    padding: 80px;
-    border-radius: 20px;
-    width: 90%;
-    max-width: 400px;
+    border-radius: 0; /* نخليها فل */
+    padding: 40px;
+    box-sizing: border-box;
     text-align: center;
-    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-button {
+    button {
     margin-top: 15px;
     background: #2ea3f2;
     border: none;
