@@ -1,0 +1,104 @@
+{
+  "Samsung": {
+    "A10": "A20",
+    "A10s": "A20s",
+    "A20": "A10",
+    "A20s": "A10s",
+    "A30": "A50",
+    "A30s": "A50s",
+    "A50": "A30",
+    "A50s": "A30s",
+    "A70": "A71",
+    "A71": "A70",
+    "A12": "A13",
+    "A13": "A12",
+    "A21s": "A12",
+    "M11": "M12",
+    "M12": "M11"
+  },
+
+  "Xiaomi": {
+    "Redmi 8": "Redmi 9",
+    "Redmi 9": "Redmi 8",
+    "Redmi 9A": "Redmi 9C",
+    "Redmi 9C": "Redmi 9A",
+    "Redmi 10": "Redmi 10 2022",
+    "Redmi 10 2022": "Redmi 10",
+    "Redmi Note 8": "Note 9",
+    "Redmi Note 9": "Note 8",
+    "Redmi Note 10": "Note 11",
+    "Redmi Note 11": "Note 10"
+  },
+
+  "Realme": {
+    "C11": "C21",
+    "C21": "C11",
+    "C25": "C25s",
+    "C25s": "C25",
+    "C3": "C11",
+    "Narzo 50": "Narzo 60"
+  },
+
+  "Infinix": {
+    "Hot 8": "Hot 9",
+    "Hot 9": "Hot 8",
+    "Hot 10": "Hot 11",
+    "Hot 11": "Hot 10",
+    "Smart 5": "Smart 6",
+    "Smart 6": "Smart 5",
+    "Note 7": "Note 8",
+    "Note 8": "Note 7"
+  },
+
+  "Huawei": {
+    "Y6p": "Y7p",
+    "Y7p": "Y6p",
+    "Y8p": "Y9s",
+    "Y9s": "Y8p",
+    "P30 Lite": "P40 Lite",
+    "P40 Lite": "P30 Lite"
+  },
+
+  "Honor": {
+    "8X": "9X",
+    "9X": "8X",
+    "10 Lite": "20 Lite",
+    "20 Lite": "10 Lite"
+  },
+
+  "Oppo": {
+    "A3s": "A5s",
+    "A5s": "A3s",
+    "A15": "A16",
+    "A16": "A15",
+    "A31": "A32",
+    "A32": "A31"
+  },
+
+  "Vivo": {
+    "Y11": "Y12",
+    "Y12": "Y11",
+    "Y15": "Y17",
+    "Y17": "Y15",
+    "Y20": "Y21",
+    "Y21": "Y20"
+  },
+
+  "Tecno": {
+    "Spark 4": "Spark 5",
+    "Spark 5": "Spark 4",
+    "Spark 6": "Spark 7",
+    "Spark 7": "Spark 6",
+    "Camon 15": "Camon 16",
+    "Camon 16": "Camon 15"
+  },
+
+  "Itel": {
+    "A16": "A23",
+    "A23": "A16",
+    "A25": "A26",
+    "A26": "A25",
+    "S15": "S16",
+    "S16": "S15"
+  }
+}

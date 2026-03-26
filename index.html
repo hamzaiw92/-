@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>توافق الشاشات</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0b1a2b; /* ازرق حبري */
+    color: white;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.card {
+    background: #0f243d;
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+}
+button {
+    background: #2ea3f2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body><div class="container">
+    <div class="card">
+        <h2>📱 توافق الشاشات</h2><input type="text" id="model" placeholder="اكتب اسم الجهاز مثل A20">
+
+    <select id="brand">
+        <option value="">اختر الشركة</option>
+        <option>Samsung</option>
+        <option>Xiaomi</option>
+        <option>Realme</option>
+        <option>Infinix</option>
+        <option>Huawei</option>
+        <option>Honor</option>
+        <option>Oppo</option>
+        <option>Vivo</option>
+        <option>Tecno</option>
+        <option>Itel</option>
+    </select>
+
+    <button onclick="search()">بحث</button>
+</div>
+
+</div><script>
+function search(){
+    const brand = document.getElementById('brand').value;
+    const model = document.getElementById('model').value;
+
+    if(!brand || !model){
+        alert('اختار الشركة واسم الجهاز');
+        return;
+    }
+
+    localStorage.setItem('brand', brand);
+    localStorage.setItem('model', model);
+
+    window.location.href = 'result.html';
+}
+</script></body>
+</html><!-- ================= الصفحة الثانية ================= --><!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>النتيجة</title>
+<style>
+body {
+    margin:0;
+    background:#0b1a2b;
+    color:white;
+    font-family:Arial;
+}
+.container {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+.card {
+    background:#0f243d;
+    padding:30px;
+    border-radius:15px;
+    width:300px;
+    text-align:center;
+}
+button{
+    margin-top:15px;
+    background:#2ea3f2;
+    border:none;
+    padding:10px;
+    border-radius:8px;
+    color:white;
+}
+</style>
+</head>
+<body><div class="container">
+    <div class="card">
+        <h2>📊 نتيجة التوافق</h2>
+        <div id="result">جاري التحميل...</div>
+        <button onclick="back()">رجوع</button>
+    </div>
+</div><script>
+fetch('data.json')
+.then(res => res.json())
+.then(data => {
+    const brand = localStorage.getItem('brand');
+    const model = localStorage.getItem('model');
+
+    const result = data[brand]?.[model];
+
+    if(result){
+        document.getElementById('result').innerText = `📱 ${model} \n🔁 البديل: ${result}`;
+    } else {
+        document.getElementById('result').innerText = '❌ لا يوجد توافق';
+    }
+});
+
+function back(){
+    window.location.href = 'index.html';
+}
+</script></body>
+</html><!-- ================= ملف JSON ================= -->{ "Samsung": { "A10": "A20", "A20": "A10", "A30": "A50" }, "Xiaomi": { "Redmi 9": "Redmi 10", "Redmi 10": "Redmi 9" }, "Realme": { "C11": "C21" }, "Infinix": { "Hot 10": "Hot 11" } }
